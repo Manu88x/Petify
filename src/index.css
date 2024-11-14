@@ -26,6 +26,31 @@ header {
     margin: 0;
     font-size: 2rem;
   }
+
+/* 4. Navigation Styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  nav ul li {
+    margin: 0 1.5rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #f39c12;
+  }
+
   
 
 
