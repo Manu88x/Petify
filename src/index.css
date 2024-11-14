@@ -51,6 +51,13 @@ nav ul {
     color: #f39c12;
   }
 
+/* 5. Horizontal Line */
+hr {
+    margin-top: 1rem;
+    border: 0;
+    border-top: 1px solid #444;
+}
+
   
 
 
