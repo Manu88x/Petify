@@ -123,7 +123,7 @@ function Shop() {
   }
 
   return (
-    <div className="todo-list">
+    <div className="shop-list">
       <h1>Shopping List</h1>
 
       {error && <p className="error">{error}</p>}
@@ -164,15 +164,15 @@ function Shop() {
       <ul>
         {tasks.map((task) => (
           <li key={task.id}>
-            <div className="task-info">
+            <div className="item-info">
               <img
                 src={task.image || "default-image.jpg"}
                 alt={task.name}
-                className="task-image"
+                className="item-image"
               />
-              <div className="task-details">
-                <span className="task-name">{task.name}</span>
-                <span className="task-price">${task.price}</span>
+              <div className="item-details">
+                <span className="item-name">{task.name}</span>
+                <span className="item-price">${task.price}</span>
               </div>
             </div>
 

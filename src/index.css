@@ -81,6 +81,23 @@ hr {
     font-weight: bold;
   }
 
+  /* 7. Todo List Styling */
+.shop-list {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 500px;
+  }
+  
+  .shop-list h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
   
 
 
