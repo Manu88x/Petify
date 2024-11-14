@@ -1,11 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Shop() {
-  
   const [tasks, setTasks] = useState([]);
-
-  
   const [newTask, setNewTask] = useState({ name: "", price: "", image: "" });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  // Fetch tasks from the backend (GET)
+  useEffect(() => {
+    setLoading(true);
+    fetch("https://shop-617v.onrender.com/items") 
+      .then((response) => response.json())
+      .then((data) => {
+        setTasks(data); 
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError("Error fetching tasks");
+        setLoading(false);
+      });
+  }, []);
 
   // Handle input changes for the form
   function handleInputChange(event) {
@@ -16,21 +30,68 @@ function Shop() {
     }));
   }
 
-  // Add a new task
+  // Add a new task (POST)
   function addTask() {
     const { name, price, image } = newTask;
     if (name.trim() && price.trim() && image.trim()) {
-      setTasks((prevTasks) => [
-        ...prevTasks,
-        { name, price, image },
-      ]);
-      setNewTask({ name: "", price: "", image: "" });  // Clear the form after adding the task
+      setLoading(true);
+      fetch("https://shop-617v.onrender.com/items", { 
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, price, image }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          setTasks((prevTasks) => [...prevTasks, data]); // Add new task to state
+          setNewTask({ name: "", price: "", image: "" });
+          setLoading(false);
+        })
+        .catch((error) => {
+          setError("Error adding task");
+          setLoading(false);
+        });
     }
   }
 
-  // Delete a task
-  function deleteTask(index) {
-    setTasks((prevTasks) => prevTasks.filter((_, i) => i !== index));
+  // Delete a task (DELETE)
+  function deleteTask(id) {
+    setLoading(true);
+    fetch(`https://shop-617v.onrender.com/items/${id}`, { 
+      method: "DELETE",
+    })
+      .then(() => {
+        setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError("Error deleting task");
+        setLoading(false);
+      });
+  }
+
+  // Update a task (PATCH)
+  function updateTask(id, updatedData) {
+    setLoading(true);
+    fetch(`https://shop-617v.onrender.com/items/${id}`, { 
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setTasks((prevTasks) =>
+          prevTasks.map((task) => (task.id === id ? data : task))
+        );
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError("Error updating task");
+        setLoading(false);
+      });
   }
 
   // Move a task up
@@ -65,6 +126,8 @@ function Shop() {
     <div className="todo-list">
       <h1>Shopping List</h1>
 
+      {error && <p className="error">{error}</p>}
+
       <div>
         <input
           type="text"
@@ -87,33 +150,53 @@ function Shop() {
           value={newTask.image}
           onChange={handleInputChange}
         />
-        <button className="add-button" onClick={addTask}>
-          Add Item
+        <button
+          className="add-button"
+          onClick={addTask}
+          disabled={loading}
+        >
+          {loading ? "Adding..." : "Add Item"}
         </button>
       </div>
 
-      <ul>
-        {tasks.map((task, index) => (
-          <li key={index}>
-            <div className="task-info">
-              <img src={task.image} alt={task.name} className="task-image" />
+      {loading && <p>Loading...</p>}
 
+      <ul>
+        {tasks.map((task) => (
+          <li key={task.id}>
+            <div className="task-info">
+              <img
+                src={task.image || "default-image.jpg"}
+                alt={task.name}
+                className="task-image"
+              />
               <div className="task-details">
                 <span className="task-name">{task.name}</span>
-                
                 <span className="task-price">${task.price}</span>
               </div>
             </div>
 
-            <button onClick={() => deleteTask(index)} className="delete-button">
+            <button
+              onClick={() => deleteTask(task.id)}
+              className="delete-button"
+              disabled={loading}
+            >
               Delete
             </button>
 
-            <button onClick={() => moveTaskUp(index)} className="up-button">
+            <button
+              onClick={() => moveTaskUp(tasks.indexOf(task))}
+              className="up-button"
+              disabled={loading}
+            >
               Up
             </button>
 
-            <button onClick={() => moveTaskDown(index)} className="down-button">
+            <button
+              onClick={() => moveTaskDown(tasks.indexOf(task))}
+              className="down-button"
+              disabled={loading}
+            >
               Down
             </button>
           </li>
@@ -124,7 +207,6 @@ function Shop() {
 }
 
 export default Shop;
-
 
 
 
