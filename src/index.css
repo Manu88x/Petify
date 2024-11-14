@@ -207,7 +207,63 @@ ul li button {
     background-color: #2980b9;
   }
 
-
+/* 11. Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  /* 12. Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+  
+    nav ul li {
+      margin-bottom: 10px;
+    }
+  
+    .todo-list {
+      padding: 1.5rem;
+      max-width: 90%;
+    }
+  
+    .todo-list input {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    .Clock {
+      font-size: 2rem;
+    }
+  
+    .Clock-container {
+      height: 150px;
+    }
+  
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    ul li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    ul li button {
+      margin-left: 0;
+      margin-top: 0.5rem;
+    }
+  }
 
 
 
