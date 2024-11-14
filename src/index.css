@@ -14,7 +14,18 @@ body {
     padding: 20px;
   }
 
+  /* 3. Header Styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
   
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
   
 
 
