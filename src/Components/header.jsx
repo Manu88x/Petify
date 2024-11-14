@@ -5,8 +5,8 @@ function Header(){
         <nav>
             <ul>
                 <li><a href="http://localhost:5173/">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">contact</a></li>
+                <li><a href="http://localhost:5173/About">About</a></li>
+                <li><a href="http://localhost:5173/Contact">contact</a></li>
             </ul>
             <hr></hr>
         </nav>
