@@ -58,6 +58,29 @@ hr {
     border-top: 1px solid #444;
 }
 
+
+/* 6. Digital Clock Styling */
+.Clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: #333;
+    margin: 2rem 0;
+  }
+  
+  .Clock {
+    font-size: 2.5rem;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    background-color: #444;
+  }
+  
+  .Clock span {
+    font-weight: bold;
+  }
+
   
 
 
