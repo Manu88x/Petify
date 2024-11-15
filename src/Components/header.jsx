@@ -4,9 +4,9 @@ function Header(){
         <h1>Shopify</h1>
         <nav>
             <ul>
-                <li><a href="https://superb-gelato-afbe79.netlify.app">Home</a></li>
-                <li><a href="https://superb-gelato-afbe79.netlify.app/About">About</a></li>
-                <li><a href="https://superb-gelato-afbe79.netlify.app/Contact">contact</a></li>
+                <li><a href="http://localhost:5173/">Home</a></li>
+                <li><a href="http://localhost:5173//About">About</a></li>
+                <li><a href="http://localhost:5173//Contact">contact</a></li>
             </ul>
             <hr></hr>
         </nav>
