@@ -83,8 +83,8 @@ If you want to run the project locally, you'll need:
 
 - React JS
 - Vite
-- CSS3
-- JavaScript (ES6)
+- CSS
+- JavaScript 
 
 ## Related Repositories
 
