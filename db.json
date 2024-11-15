@@ -3,25 +3,25 @@
     {
       "id": 1,
       "name": "Banana",
-      "image": "./src/assets/Bananas.jpg",
+      "image": "https://www.eatthis.com/wp-content/uploads/sites/4/2018/07/picking-bananas-shelf-grocery-store-shopping.jpg?resize=640,468&quality=82&strip=all",
       "price": 15.99
     },
     {
       "id": 2,
       "name": "ice-cream",
-      "image": "./src/assets/Icecream.jpg",
+      "image": "https://as2.ftcdn.net/v2/jpg/04/96/59/09/1000_F_496590917_3hQlNS7YcnClCqKEMYT085vZvKo3tRv4.jpg",
       "price": 25.98
     },
     {
       "id": 3,
       "name": "tissue",
-      "image": "./src/assets/Tissue.jpg",
+      "image": "https://icdn.lenta.ru/images/2022/03/18/12/20220318123832934/owl_detail_240_ddd3490cf5bc201f0ea5a8ea60eff356.jpg",
       "price": 5.99
     },
     {
       "id": 4,
       "name": "toothpaste",
-      "image": "./src/assets/Toothpaste.jpg",
+      "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTti7yosNqu11F9q-fdfl_JKICblOgybB0gSdpTQBxYDYAH1PR1",
       "price": 12.11
     },
     {
