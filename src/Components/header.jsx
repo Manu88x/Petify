@@ -3,7 +3,7 @@ function Header(){
     <header ClassName="Header">
         <h1>Shopify</h1>
         <nav>
-            <ul>
+        <ul>
                 <li><a href="https://superb-gelato-afbe79.netlify.app/">Home</a></li>
                 <li><a href="https://superb-gelato-afbe79.netlify.app/about">About</a></li>
                 <li><a href="https://superb-gelato-afbe79.netlify.app/contact">contact</a></li>
