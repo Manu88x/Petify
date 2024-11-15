@@ -10,7 +10,7 @@
 This is  a web app that allows its users to keep track of list items they buy while shopping.
 ## Screenshot
 
-![Shopify](./src/assets/site.png.png)
+![Shopify](./src/assets/site.png)
 
 ## Features
 
@@ -54,7 +54,7 @@ If you want to run the project locally, you'll need:
 1. Clone this repository using:
 
    ```bash
-  https://github.com/Manu88x/Project-react.git
+   https://github.com/Manu88x/Project-react.git
    ```
 
    or by downloading a ZIP file of the code.
