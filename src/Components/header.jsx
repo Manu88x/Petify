@@ -5,8 +5,8 @@ function Header(){
         <nav>
             <ul>
                 <li><a href="https://superb-gelato-afbe79.netlify.app">Home</a></li>
-                <li><a href="https://superb-gelato-afbe79.netlify.app">About</a></li>
-                <li><a href="https://superb-gelato-afbe79.netlify.app">contact</a></li>
+                <li><a href="https://superb-gelato-afbe79.netlify.app/About">About</a></li>
+                <li><a href="https://superb-gelato-afbe79.netlify.app/Contact">contact</a></li>
             </ul>
             <hr></hr>
         </nav>
