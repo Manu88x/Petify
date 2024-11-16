@@ -62,7 +62,7 @@ If you want to run the project locally, you'll need:
 2. Navigate to the project directory:
 
    ```bash
-   cd react-blog
+   cd Shopify
    ```
 
 3. Install the required dependencies:
