@@ -1,7 +1,7 @@
 function Footer(){
     return(
   <footer className="Footer">
-    <p>&copy;{new Date().getFullYear()} Shopify</p>
+    <p>&copy;{new Date().getFullYear()} Petify</p>
   </footer>
     );
 }

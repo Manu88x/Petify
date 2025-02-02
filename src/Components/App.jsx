@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './header.jsx';
 import Footer from './Footer.jsx';
-import Shop from './Shop.jsx'
+import Pet from './pet.jsx'
 import Digital from './Digital.jsx';
 
 import Home from '../Pages/Home.jsx';  
@@ -20,7 +20,7 @@ function App() {
           <>
             <Home />  
             <Digital />  
-            <Shop />  
+            <Pet />  
           </>
         } />
 

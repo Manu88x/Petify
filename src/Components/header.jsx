@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <header className="Header">
-      <h1>Shopify</h1>
+      <h1>Petify</h1>
       <nav>
         <ul>
           
