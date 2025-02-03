@@ -27,7 +27,7 @@ This is  a web app is designed to help animal clinics efficiently manage and tra
 
 ### View Live Site
 
-Visit the deployed application at: [Shopify](https://lucent-klepon-0db439.netlify.app/)
+Visit the deployed application at: [Petify](https://lucent-klepon-0db439.netlify.app/)
 
 The live site allows clinics to:
 
