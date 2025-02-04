@@ -8,7 +8,11 @@
 ## Description
 
 This is  a web app is designed to help animal clinics efficiently manage and track vet visits along with the vets, pets and owners details
+## Screenshot
 
+![PROJECT-REACT](./src/assets/site2.png)
+![PROJECT-REACT](./src/assets/site3.png)
+![PROJECT-REACT](./src/assets/site.png)
 
 ## Features
 
