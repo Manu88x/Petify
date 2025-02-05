@@ -140,10 +140,10 @@ function Pet() {
       booking.owner_name.toLowerCase().includes(searchTerm) ||
       booking.vet_name.toLowerCase().includes(searchTerm) ||
       booking.animal_species.toLowerCase().includes(searchTerm) ||
-      booking.visit_date.toLowerCase().includes(searchTerm)
+      (new Date(booking.visit_date).toLocaleDateString().includes(searchTerm)) // Added search for visit_date
     );
   });
-
+  
   return (
     <div className="pet-list">
       <h1>Vet Booking List</h1>
